@@ -7,7 +7,8 @@
             <img src="practicas/img/logo40web-.png" alt="">
             <h1>Módulo 7 - Práctica 1. Mi primera aplicación en PHP</h1>
         </header>
-        <img src="" alt="">
+        <img src="practicas/img/imagen_2024-09-18_142230668-fotor-20240918142257.png" alt="">
+        <p>David Blanco</p>
         <p>
             ?php: Sirve para abrir el codigo PHP y dentro poner toda la programacion en lengauje PHP
             function sayHello($name): Crea una function llamada sayHello de la cual coge una variable llamada name
