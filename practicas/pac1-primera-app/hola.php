@@ -1,13 +1,14 @@
 <html>
 	<head>
 		<title>Hola</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	</head>
 	<body>
-        <header>
-            <img src="practicas/img/logo40web-.png" alt="">
-            <h1>Módulo 7 - Práctica 1. Mi primera aplicación en PHP</h1>
+        <header class="bg-dark p-5 d-flex justify-content-between align-item-center">
+            <img src="practicas/pac1-primera-app/imagen_2024-09-18_142230668-fotor-20240918142257.png" alt="Logo de FPLlefia">
+            <h1 class="text-white">Módulo 7 - Práctica 1. Mi primera aplicación en PHP</h1>
         </header>
-        <img src="practicas/img/imagen_2024-09-18_142230668-fotor-20240918142257.png" alt="">
+        <img src="practicas/img/imagen_2024-09-18_142230668-fotor-20240918142257.png" alt="Foto del Alumno">
         <p>David Blanco</p>
         <p>
             ?php: Sirve para abrir el codigo PHP y dentro poner toda la programacion en lengauje PHP
