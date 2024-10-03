@@ -1,0 +1,134 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Contenedor principal */
+.detall-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Estilos para la imagen y tráiler */
+.detall-imatge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detall-imatge img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.detall-imatge .btn {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: transparent; /* Hacer que el fondo sea transparente */
+    border: 2px solid #000; /* Establecer el borde */
+    border-radius: 5px; /* Radio del borde */
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+}
+
+.detall-imatge .btn:hover {
+    background-color: #830505; /* Fondo negro al pasar el mouse */
+    color: #fff; /* Texto blanco al pasar el mouse */
+}
+
+/* Estilos para la información de la película */
+.detall-informacio {
+    flex: 2;
+    padding-left: 20px; /* Para separar un poco el contenido de la imagen */
+}
+
+.detall-informacio p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.detall-informacio strong {
+    font-weight: bold;
+}
+
+/* Estilos para los horarios */
+.horaris {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.horaris p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Botones de horario */
+.horaris-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.hora {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* Estilos para los diferentes colores de horario */
+.hora.red {
+    background-color: #d32f2f;
+}
+
+.hora.dark {
+    background-color: #4e4e4e;
+}
+.btn-back {
+    display: inline-block;
+    margin-top: 40px; /* Ajusta este valor según la separación que necesites */
+    padding: 10px 20px; /* Ajusta el padding si lo deseas */
+    font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+    color: #fff; /* Color del texto */
+    background-color: #d32f2f;/* Color de fondo (puedes cambiarlo) */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-decoration: none; /* Elimina el subrayado */
+    
+}
+.star-rating {
+    margin-top: 20px; /* Ajusta este valor para separar más o menos */
+}
+
+.star-rating i {
+    color: rgba(194, 194, 22, 0.575); /* Cambia el color de las estrellas a amarillo */
+    font-size: 24px; /* Ajusta el tamaño de las estrellas si es necesario */
+}
+
+
