@@ -88,7 +88,6 @@ p {
     font-size: 14px;
 }
 
-/* Botones de horario */
 .horaris-buttons {
     display: flex;
     gap: 10px;
@@ -131,4 +130,9 @@ p {
     font-size: 24px; /* Ajusta el tamaño de las estrellas si es necesario */
 }
 
+.carousel-item img {
+    width: 600px; 
+    height: 600px; 
 
+  }
+  

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 4</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 <?php
@@ -21,6 +22,9 @@ $pelicules = [
         "genere" => "Superherois",
         "trailer" => "trailer.php?id=1", 
         "valoracio" => 4, 
+        "imatge2" => "https://lumiere-a.akamaihd.net/v1/images/p_deadpool_wolverine_snuggle_gen_v2_c251bde1.png",
+        "imatge3" => "https://es.web.img3.acsta.net/img/3f/2e/3f2efc609e5e23d748f1d44231bf6b2f.jpg",
+        "imatge4" => "https://www.mubis.es/media/users/12828/325713/posible-logo-oficial-para-deadpool-3-original.jpg"
     ],
     [
         "nom" => "Del Revés 2",
@@ -33,7 +37,10 @@ $pelicules = [
         "qualificacio" => "Apta",
         "genere" => "Animació",
         "trailer" => "trailer.php?id=2", 
-        "valoracio" => 4, 
+        "valoracio" => 4,
+        "imatge2" => "https://www.lebrija.es/export/sites/lebrija/.galleries/imagenes-eventos/DEL-REVES-PORTADA.jpg",
+        "imatge3" => "https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2024/07/18/del-reves-2-inside-out-2.jpeg",
+        "imatge4" => "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpY0tJkPJpPg_fI0tPZmUqchQj5bc1hXTNCefcvJ0ih0lW4ImxuqWKnnWN7pt7mwK9PbIOUxf3AqT2PsdKxr4Ike7SAlSqH3S98qsDEI83-H9cMYqpy2rttfE-3FfgkSvKnjjxPsCzrQHT9pkWmgG0LCIC7r5u4iMKF79M9H_uU6Mu2L3vK9iiA4957cs/s1600/inside-out-2.2.webp"
     ],
     [
         "nom" => "Gru 4 - Mi Villano Favorito",
@@ -46,7 +53,10 @@ $pelicules = [
         "qualificacio" => "Apta",
         "genere" => "Animació",
         "trailer" => "trailer.php?id=3", 
-        "valoracio" => 3, // Nueva valoración entera
+        "valoracio" => 3,
+        "imatge2" => "https://img2.rtve.es/i/?w=1600&i=01719566831758.jpg",
+        "imatge3" => "https://pics.filmaffinity.com/Gru_4_Mi_villano_favorito-551473536-large.jpg",
+        "imatge4" => "https://img.rtve.es/imagenes/fotograma-gru-4-villano-favorito/01719566504393.jpg"
     ],
     [
         "nom" => "Spider-Man: Homecoming",
@@ -59,7 +69,10 @@ $pelicules = [
         "qualificacio" => "7 anys",
         "genere" => "Acció",
         "trailer" => "trailer.php?id=4", 
-        "valoracio" => 5, 
+        "valoracio" => 5,
+        "imatge2" => "https://hips.hearstapps.com/hmg-prod/images/reboot-spiderman-homecoming-1533191985.jpg?crop=0.5625xw:1xh;center,top&resize=1200:*",
+        "imatge3" => "https://i.blogs.es/9d89b1/cartel-homecoming-spiderman/650_1200.jpg",
+        "imatge4" => "https://wallpapers.com/images/featured/spider-man-homecoming-3ra4dpth4ip0ha5n.jpg"
     ],
     [
         "nom" => "Oppenheimer",
@@ -72,7 +85,10 @@ $pelicules = [
         "qualificacio" => "+12",
         "genere" => "Drama",
         "trailer" => "trailer.php?id=5", 
-        "valoracio" => 5, 
+        "valoracio" => 5,
+        "imatge2" => "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/07/26/16903611735943.jpg",
+        "imatge3" => "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/07/18/16896829116146.jpg",
+        "imatge4" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_-2pu4m5VyW4E7jIWiXxORQUQdUdWQc8ywA&s"
     ],
     [
         "nom" => "Barbie",
@@ -85,7 +101,10 @@ $pelicules = [
         "qualificacio" => "Apta",
         "genere" => "Comèdia",
         "trailer" => "trailer.php?id=6", 
-        "valoracio" => 4, 
+        "valoracio" => 4,
+        "imatge2" => "https://image.europafm.com/clipping/cmsimages01/2023/07/11/D9FB4137-D5F0-41C6-AA13-7E7BAA504095/margot-robbie-protagonista-pelicula-barbie_103.jpg?crop=1539,1154,x259,y0&width=1200&height=900&optimize=low&format=webply",
+        "imatge3" => "https://media.revistagq.com/photos/64ae57646d65adfb0f3a6316/master/pass/pelicula-barbie-ken-ryan-gosling.jpeg",
+        "imatge4" => "https://phantom-elmundo.unidadeditorial.es/3287d0ce05b1de53315291d36468b462/crop/0x0/1500x1000/resize/1200/f/webp/assets/multimedia/imagenes/2023/09/12/16945119224336.jpg"
     ],
     [
         "nom" => "Gran Turismo",
@@ -98,7 +117,10 @@ $pelicules = [
         "qualificacio" => "Apta",
         "genere" => "Acció",
         "trailer" => "trailer.php?id=7", 
-        "valoracio" => 2, 
+        "valoracio" => 2,
+        "imatge2" => "https://cdn-9.motorsport.com/images/amp/6l9zMqx0/s1000/archie-madekwe-and-david-harbo.jpg",
+        "imatge3" => "https://sm.ign.com/t/ign_es/photo/default/df-05832-1691605472791_a24n.1080.jpg",
+        "imatge4" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR27I_tJhmKIgfueK9pDytdB6LE5DQDRWTl0huAwf10lgV91D3F2HxvIiM0Ix-51C1l0KI&usqp=CAU"
     ],
     [
         "nom" => "Los Asesinos de la Luna",
@@ -111,7 +133,10 @@ $pelicules = [
         "qualificacio" => "+12",
         "genere" => "Drama",
         "trailer" => "trailer.php?id=8", 
-        "valoracio" => 4, 
+        "valoracio" => 4,
+        "imatge2" => "https://i.ytimg.com/vi/xSL4pV9lJcE/maxresdefault.jpg",
+        "imatge3" => "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/09/asesinos-luna-killers-flower-moon-3133788.jpg?tf=3840x",
+        "imatge4" => "https://pics.filmaffinity.com/killers_of_the_flower_moon-638151511-large.jpg"
     ],
     [
         "nom" => "La Monja II",
@@ -124,7 +149,10 @@ $pelicules = [
         "qualificacio" => "+16",
         "genere" => "Horror",
         "trailer" => "trailer.php?id=9", 
-        "valoracio" => 1, 
+        "valoracio" => 1,
+        "imatge2" => "https://fotografias.antena3.com/clipping/cmsimages02/2023/09/08/EB7F4770-0484-4367-99CC-F9E1EE2A0564/monja_103.jpg?crop=960,720,x241,y0&width=1200&height=900&optimize=low&format=webply",
+        "imatge3" => "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/09/15/la-monja-ii.jpeg",
+        "imatge4" => "https://i0.wp.com/eldiadeescobar.com.ar/wp-content/uploads/2023/09/La-monja-2.jpg?fit=1000%2C625&ssl=1"
     ],
     [
         "nom" => "Elemental",
@@ -138,7 +166,10 @@ $pelicules = [
         "genere" => "Animació",
         "trailer" => "trailer.php?id=10", 
         "valoracio" => 4,
-        "imatge2" => "https://lumiere-a.akamaihd.net/v1/images/p_deadpool_wolverine_snuggle_gen_v2_c251bde1.png",   
+        "imatge2" => "https://lumiere-a.akamaihd.net/v1/images/image_20a410a4.jpeg?region=0,0,640,480",
+        "imatge3" => "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/07/12/16891762471389.jpg",
+        "imatge4" => "https://www.gamereactor.es/media/66/elemental_4056603b.jpg"
+ 
     ]
 ];
 
@@ -201,29 +232,43 @@ if ($id > 0 && $id <= count($pelicules)) {
                 }
             ?>
         </div>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <a href="index.php" class="btn-back mb-3">Tornar a la cartellera</a>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Slides del carrusel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php echo $pelicula["imatge2"]; ?>" alt="First slide">
+      <img src="<?php echo htmlspecialchars($pelicula['imatge2'], ENT_QUOTES, 'UTF-8'); ?>" class="d-block w-100" alt="Slide 1">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
+      <img src="<?php echo htmlspecialchars($pelicula['imatge3'], ENT_QUOTES, 'UTF-8'); ?>" class="d-block w-100" alt="Slide 2">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
+      <img src="<?php echo htmlspecialchars($pelicula['imatge4'], ENT_QUOTES, 'UTF-8'); ?>" class="d-block w-100" alt="Slide 3">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+
+  <!-- Controles prev y next -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
+
         
 
 <script src="https://kit.fontawesome.com/01d0323942.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

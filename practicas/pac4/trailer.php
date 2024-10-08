@@ -1,5 +1,5 @@
 <?php
-// Array simplificado de películas
+
 $pelicules = [
     [
         "nom" => "Deadpool y Lobezno",
@@ -53,7 +53,7 @@ if ($id < 1 || $id > count($pelicules)) {
 }
 
 // Obtener los datos de la película correspondiente al ID
-$pelicula = $pelicules[$id - 1]; // Restamos 1 porque los índices del array empiezan en 0
+$pelicula = $pelicules[$id - 1]; 
 ?>
 
 <!DOCTYPE html>
@@ -104,13 +104,10 @@ $pelicula = $pelicules[$id - 1]; // Restamos 1 porque los índices del array emp
     <h1>Tràiler de <?php echo $pelicula["nom"]; ?></h1>
 
     <div class="video-container">
-        <!-- Vídeo del tràiler que se reproduce automáticamente -->
         <iframe width="100%" height="450" src="<?php echo $pelicula["trailer"]; ?>?autoplay=1" 
             title="Tràiler de <?php echo $pelicula['nom']; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-
-    <!-- Botón para regresar a la cartelera (index.php) -->
-    <a href="peliculas.php" class="btn-back">Tornar a la cartellera</a>
+    <a href="index.php" class="btn-back">Tornar a la cartellera</a>
 
 </body>
 </html>
