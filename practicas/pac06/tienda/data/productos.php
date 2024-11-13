@@ -1,5 +1,4 @@
 <?php
-// Definir un array con productos
 $productos = [
     [
         'nombre' => 'leche entera',

@@ -9,12 +9,12 @@
 <body>
 
 <?php
-// Rebem els valors enviats mitjançant POST
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = htmlspecialchars($_POST['nom']);
     $cognoms = htmlspecialchars($_POST['cognoms']);
 
-    // Array multidimensional amb la informació de cada casa
+
     $casas_info = [
         "Gryffindor" => [
             "background_color" => "#740001",
@@ -46,18 +46,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]
     ];
 
-    // Seleccionem una casa aleatòriament
+
     $casas = array_keys($casas_info);
     $casa_seleccionada = $casas[array_rand($casas)];
 
-    // Assignem les dades de la casa seleccionada
     $color_fons = $casas_info[$casa_seleccionada]['background_color'];
     $color_text = $casas_info[$casa_seleccionada]['text_color'];
     $missatge_benvinguda = $casas_info[$casa_seleccionada]['welcome_message'];
     $color_missatge = $casas_info[$casa_seleccionada]['message_background'];
     $escut_casa = $casas_info[$casa_seleccionada]['image'];
 
-    // Aplicar estils dinàmics segons la casa seleccionada
+
     echo "<style>
             body {
                 background-color: $color_fons;
