@@ -128,6 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "<p>El carret està buit.</p>";
         }
         ?>
+        <a type="submit" href="../index.php">Volver</a>
     </div>
 </body>
 </html>

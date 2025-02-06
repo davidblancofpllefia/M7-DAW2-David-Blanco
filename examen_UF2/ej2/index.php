@@ -13,7 +13,7 @@ ob_start();
             <option value="joc2">Joc 2</option>
             <option value="joc3">Joc 3</option>
         </select>
-        <button type="submit" class="btn btn-primary mt-3">jugar</button>
+        <button type="submit" class="btn btn-primary mt-3">Jugar</button>
     </form>
 </div>
 
