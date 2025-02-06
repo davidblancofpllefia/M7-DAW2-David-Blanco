@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php
+ob_start(); 
+include 'header.php';
+?>
 
 <div class="container mt-5">
     <h1 class="text-center">Patrones Estructurales</h1>
@@ -7,14 +10,34 @@
         para formar estructuras más grandes y reutilizables.
     </p>
 
-    <form action="patron.php" method="GET" class="text-center mt-4">
+    <form action="" method="GET" class="text-center mt-4">
         <label for="patron">Selecciona un patrón:</label>
         <select name="patron" id="patron" class="form-select w-50 mx-auto">
-            <option value="adaptador">Adaptador</option>
-            <option value="decorador">Decorador</option>
-            <option value="fachada">Fachada</option>
+            <option value="">Selecciona un patrón</option>
+            <option value="adapter">Adapter</option>
+            <option value="bridge">Bridge</option>
+            <option value="composite">Composite</option>
+            <option value="decorator">Decorator</option>
+            <option value="facade">Facade</option>
+            <option value="flyweight">Flyweight</option>
+            <option value="proxy">Proxy</option>
         </select>
         <button type="submit" class="btn btn-primary mt-3">Ver información</button>
     </form>
 </div>
+
+<?php
+
+if (isset($_GET['patron']) && $_GET['patron'] != "") {
+    $patron = $_GET['patron'];
+    header("Location: patrons/{$patron}.php");
+    exit();
+}
+?>
+
+<?php
+ob_end_flush(); 
+?>
+
+
 

@@ -34,7 +34,7 @@
                     <h5 class="card-title">Patrones de Comportamiento</h5>
                     <p class="card-text">Definen cómo interactúan los objetos y controlan el flujo de datos.</p>
                     <a href="comportament.php" class="btn btn-primary">Ver más</a>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
