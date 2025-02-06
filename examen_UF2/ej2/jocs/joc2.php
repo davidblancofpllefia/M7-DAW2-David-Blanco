@@ -46,10 +46,6 @@ class CarretCompra {
     public function getProductes() {
         return $this->productes;
     }
-
-    public function buidarCarret() {
-        $this->productes = [];
-    }
 }
 
 if (!isset($_SESSION['carret']) || !is_string($_SESSION['carret'])) {
@@ -86,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Afegir Productes al Carret</h1>
+        <h1 class="text-center">Joc 2: Carret de compra amb formulari</h1>
 
         <form method="POST" class="text-center mt-4">
             <div class="form-group">
@@ -100,11 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn btn-primary mt-3">Afegir Producte</button>
         </form>
 
-        <form method="POST" class="text-center mt-4">
-            <button type="submit" name="buidar" class="btn btn-danger">Buidar Carret</button>
-        </form>
-
-        <hr>
 
         <h3>Productes al Carret:</h3>
 
