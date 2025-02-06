@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php
+include '../header.php';
+include '../nav.php';
+?>
 
 <div class="container mt-5">
     <h1 class="text-center">Patrón Observador</h1>

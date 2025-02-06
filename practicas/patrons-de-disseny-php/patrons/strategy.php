@@ -1,6 +1,6 @@
 <?php
-
 include '../header.php';
+include '../nav.php';
 ?>
 
 <div class="container mt-5">

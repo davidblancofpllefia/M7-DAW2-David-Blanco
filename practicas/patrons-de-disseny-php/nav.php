@@ -7,15 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../creational.php">Patrones Creacionales</a>
+          <a class="nav-link" href="../creacion.php">Patrones Creacionales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../structural.php">Patrones Estructurales</a>
+          <a class="nav-link" href="../estructurals.php">Patrones Estructurales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../behavioral.php">Patrones Comportamentales</a>
+          <a class="nav-link" href="../estructurals.php">Patrones Comportamentales</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
