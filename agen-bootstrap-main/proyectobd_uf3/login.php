@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '/workspaces/2425-M7-DavidHenrique/UF3/MasterWebs(CRUD)/theme/config.php';
+require_once 'config.php';
 
 // 1. Comprobar si el formulario ha sido enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
