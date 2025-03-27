@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['user_id']) || $_SESSION['user_rol'] !== 'admin') {
     echo 'Acceso denegado. Solo los administradores pueden acceder a esta página.';
     exit;
