@@ -27,7 +27,7 @@ session_start();
 
                         <?php if ($_SESSION['user_rol'] === 'admin'): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="./admin/admin.php">Panel de Administración</a>
+                                <a class="nav-link" href="admin.php">Panel de Administración</a>
                             </li>
                         <?php endif; ?>
 

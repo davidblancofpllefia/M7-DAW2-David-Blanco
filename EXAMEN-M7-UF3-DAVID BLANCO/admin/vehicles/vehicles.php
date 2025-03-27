@@ -43,7 +43,7 @@ mysqli_close($mysqli);
                                 <p class="card-text"><strong>Disponible:</strong> <?php echo $vehicle['disponible'] ? 'Sí' : 'No'; ?></p>
                                 
                                 <?php if ($vehicle['disponible']): ?>
-                                    <a href="reservar_vehicle.php?vehicle_id=<?php echo $vehicle['id']; ?>" class="btn btn-primary">Reservar</a>
+                                    <a href="../reserves/add_reserve.php?vehicle_id=<?php echo $vehicle['id']; ?>" class="btn btn-primary">Reservar</a>
                                 <?php else: ?>
                                     <button class="btn btn-secondary" disabled>No disponible</button>
                                 <?php endif; ?>
