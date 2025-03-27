@@ -1,83 +1,40 @@
 <?php
 session_start();
-require_once 'config.php';
 
-// Verificar si el usuario está logueado y si es admin
-if (isset($_SESSION['user_id']) && $_SESSION['user_rol'] === 'admin') {
-
-    // Obtener los detalles del usuario logueado
-    $user_id = $_SESSION['user_id'];
-    $result_user = mysqli_query($mysqli, "SELECT * FROM USUARIS WHERE id = '$user_id' LIMIT 1");
-
-    if ($result_user && mysqli_num_rows($result_user) > 0) {
-        $user = mysqli_fetch_assoc($result_user);
-    } else {
-        echo "Usuario no encontrado.";
-        exit;
-    }
-
-    // Agregar vehículo (si el formulario es enviado)
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $model = $_POST['model'];
-        $categoria = $_POST['categoria'];
-        $preu_dia = $_POST['preu_dia'];
-        $imatge = $_POST['imatge'];
-        $disponible = isset($_POST['disponible']) ? 1 : 0;
-
-        // Validar que los campos no estén vacíos
-        if (!empty($model) && !empty($categoria) && !empty($preu_dia) && !empty($imatge)) {
-            // Insertar el nuevo vehículo en la base de datos
-            $query = "INSERT INTO VEHICLES (model, categoria, preu_dia, imatge, disponible) 
-                      VALUES ('$model', '$categoria', '$preu_dia', '$imatge', '$disponible')";
-            if (mysqli_query($mysqli, $query)) {
-                echo "Vehículo agregado correctamente.";
-            } else {
-                echo "Error al agregar el vehículo: " . mysqli_error($mysqli);
-            }
-        } else {
-            echo "Por favor, complete todos los campos.";
-        }
-    }
-} else {
-    // Si no es admin o no está logueado, redirigir a login
-    header('Location: login.php');
+if (!isset($_SESSION['user_id']) || $_SESSION['user_rol'] !== 'admin') {
+    echo 'Acceso denegado. Solo los administradores pueden acceder a esta página.';
     exit;
 }
 
-mysqli_close($mysqli);
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración</title>
-</head>
-<body>
-    <h1>Panel de Administración</h1>
+    <?php include('header.php'); ?>
 
-    <p>Hola, <?php echo htmlspecialchars($user['nom']); ?>. Estás logueado como <?php echo htmlspecialchars($user['rol']); ?>.</p>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mb-4">Panel de Administración</h1>
+                        <p class="text-center">Bienvenido, <?php echo htmlspecialchars($_SESSION['user_nom']); ?>. Estás logueado como <?php echo htmlspecialchars($_SESSION['user_rol']); ?>.</p>
+                        
+                        <h2 class="mt-4">Gestionar:</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="./admin/vehicles/admin_vehicles.php" class="btn btn-link">Gestionar Vehículos</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="./admin/reserves/admin_reserves.php" class="btn btn-link">Gestionar Reservas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h2>Agregar un nuevo vehículo</h2>
-    <form action="admin.php" method="POST">
-        <label for="model">Modelo:</label><br>
-        <input type="text" name="model" required><br>
+    <?php include('footer.php'); ?>
 
-        <label for="categoria">Categoría:</label><br>
-        <input type="text" name="categoria" required><br>
-
-        <label for="preu_dia">Precio por día:</label><br>
-        <input type="text" name="preu_dia" required><br>
-
-        <label for="imatge">Imagen (URL):</label><br>
-        <input type="text" name="imatge" required><br>
-
-        <label for="disponible">Disponible:</label>
-        <input type="checkbox" name="disponible"><br>
-
-        <input type="submit" value="Agregar vehículo">
-    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

@@ -15,7 +15,7 @@ session_start();
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Examen UF3</a>
+            <a class="navbar-brand" href="../../index.php">Examen UF3</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@ session_start();
 
                         <?php if ($_SESSION['user_rol'] === 'admin'): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="./admin/admin.php">Panel de Administración</a>
+                                <a class="nav-link" href="../../admin.php">Panel de Administración</a>
                             </li>
                         <?php endif; ?>
 
@@ -39,9 +39,15 @@ session_start();
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Cerrar sesión</a>
+                            <a class="nav-link" href="../../logout.php">Cerrar sesión</a>
                         </li>
-    
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.php">Registrarse</a>
+                        </li>
                     <?php endif; ?>
                 </ul>
             </div>

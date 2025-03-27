@@ -3,11 +3,6 @@ session_start();
 require_once 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Depuración: Ver los datos recibidos
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
-    
     // 1️⃣ Validar y recoger los datos
     $nom = isset($_POST['nom']) ? trim($_POST['nom']) : null;
     $email = isset($_POST['email']) ? trim($_POST['email']) : null;
@@ -46,7 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // 7️⃣ Ejecutar la consulta
     if ($stmt->execute()) {
-        echo 'Usuario registrado con éxito';
+        // Redirigir al login después de registrarse correctamente
+        header('Location: index.php');
+        exit;
     } else {
         echo 'Error al registrar el usuario: ' . $mysqli->error;
     }
@@ -57,31 +54,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-</head>
-<body>
-    <h1>Registro</h1>
-    <form action="" method="POST">
-        <label for="nom">Nombre</label><br>
-        <input type="text" name="nom" id="nom" required><br>
+<?php include('header.php'); ?>
 
-        <label for="email">Correo electrónico</label><br>
-        <input type="email" name="email" id="email" required><br>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Registro de Usuario</h2>
 
-        <label for="contrasenya">Contraseña</label><br>
-        <input type="password" name="contrasenya" id="contrasenya" required><br>
+                    <form action="register.php" method="POST">
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" name="nom" id="nom" required>
+                        </div>
 
-        <label for="imatge_perfil">Imagen de perfil</label><br>
-        <input type="text" name="imatge_perfil" id="imatge_perfil"><br>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
 
-        <label for="rol">Rol</label><br>
-        <input type="text" name="rol" id="rol" value="user" required><br> 
+                        <div class="mb-3">
+                            <label for="contrasenya" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="contrasenya" id="contrasenya" required>
+                        </div>
 
-        <input type="submit" value="Registrarse">
-    </form>
-</body>
-</html>
+                        <div class="mb-3">
+                            <label for="rol" class="form-label">Rol</label>
+                            <input type="text" name="rol" id="rol" value="user" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                    </form>
+
+                    <div class="mt-3 text-center">
+                        <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesión aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include('footer.php'); ?>
